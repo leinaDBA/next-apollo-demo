@@ -11,7 +11,7 @@
   },
   "scripts": {
     "postinstall": "npm --prefix client install && npm --prefix server install",
-    "lint": "eslint '**/*.{ts,js}'",
+    "lint": "eslint '**/*.{ts,js}' --ignore-pattern **/dist",
     "lint:watch": "esw --ext .ts -w '**/*.{ts,js}' --color",
     "start": "concurrently \"npm --prefix client run dev\" \"npm --prefix server run start\"",
     "test": "npm run lint && npm run test:client && npm run test:server",

@@ -1,9 +1,10 @@
 module.exports = {
   globals: {
     'ts-jest': {
-      tsConfig: './tsconfig.test.json',
+      tsconfig: './tsconfig.test.json',
     },
   },
+  moduleNameMapper: { '\\.(css)$': '<rootDir>/utils/styleMock.ts' },
   testEnvironment: 'jsdom',
   transform: {
     '^.+\\.tsx?$': 'ts-jest',

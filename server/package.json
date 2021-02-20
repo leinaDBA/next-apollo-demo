@@ -6,7 +6,8 @@
     "build": "npm run clean && tsc -p tsconfig.json",
     "clean": "rm -rf dist",
     "start": "node dist/server",
-    "type-check:watch": "npm run build -- --watch"
+    "type-check:watch": "npm run build -- --watch",
+    "test": "jest"
   },
   "dependencies": {
     "apollo-server-express": "^2.21.0",

@@ -1,13 +1,22 @@
-import * as ApolloClient from '@apollo/client';
-import sinon from 'sinon';
 import { render, RenderResult } from '../utils/test-utils';
-import Card from './Card';
+import Card, { Person } from './Card';
 
 describe('Card', () => {
-  it('defaults to loading state', () => {
-    // const useQueryStub = sinon.stub(ApolloClient, 'useQuery');
-    // useQueryStub.returns({ loading: true } as ApolloClient.QueryResult);
-    // const { getByText }: RenderResult = render(<Card {...{}} />);
-    // expect(getByText('Loading')).toBeDefined();
+  const defaultProps: Person = {
+    name: 'person name',
+    address: 'person address',
+    email: 'person email',
+    phone: 'person phone',
+  };
+  let wrapper: RenderResult;
+
+  beforeEach(() => {
+    wrapper = render(<Card {...defaultProps} />);
+  });
+
+  it('renders correctly', () => {
+    expect(wrapper.getByText(defaultProps.name)).toBeDefined();
+    expect(wrapper.getByText(defaultProps.email)).toBeDefined();
+    expect(wrapper.getByText(defaultProps.phone)).toBeDefined();
   });
 });
