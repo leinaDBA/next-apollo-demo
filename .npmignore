@@ -1,0 +1,5 @@
+.idea
+.eslint*
+.prettier*
+jest.config.js
+tsconfig.json
