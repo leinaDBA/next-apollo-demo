@@ -16,6 +16,8 @@
     "graphql": "^15.5.0"
   },
   "devDependencies": {
-    "@types/faker": "^5.1.7"
+    "@types/faker": "^5.1.7",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.1"
   }
 }

@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["jest"]
   },
   "exclude": ["dist"],
   "extends": "../tsconfig.json"
