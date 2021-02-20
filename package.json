@@ -11,15 +11,12 @@
   },
   "scripts": {
     "postinstall": "npm --prefix client install && npm --prefix server install",
-    "build": "npm run clean && tsc -p tsconfig.json",
-    "clean": "rm -rf dist",
-    "dev": "concurrently \"npm run type-check:watch\" \"npm run lint:watch -- --fix\"",
     "lint": "eslint '**/*.{ts,js}'",
     "lint:watch": "esw --ext .ts -w '**/*.{ts,js}' --color",
-    "start": "",
-    "test": "npm run lint && npm run test:client",
+    "start": "concurrently \"npm --prefix client run dev\" \"npm --prefix server run start\"",
+    "test": "npm run lint && npm run test:client && npm run test:server",
     "test:client": "npm --prefix client test",
-    "type-check:watch": "npm run build -- --watch",
+    "test:server": "npm --prefix server test",
     "preversion": "npm run build && npm test",
     "version": "git add -A dist",
     "postversion": "git push --no-verify && git push --tags --no-verify"
