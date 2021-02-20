@@ -25,7 +25,7 @@ const CardGrid = (): JSX.Element => {
     notifyOnNetworkStatusChange: true,
   });
 
-  if (!cardData) {
+  if (!cardData.length) {
     return <div>Loading</div>;
   }
 
