@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+}
+
+.stickyButton {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #c000ff;
+    height: 30px;
+    font-weight: bold;
+}

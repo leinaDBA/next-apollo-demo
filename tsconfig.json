@@ -17,9 +17,7 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "paths": {
-      "*": [
-        "./types/*"
-      ]
+      "*": ["./types/*"]
     },
     "pretty": true,
     "sourceMap": true,
